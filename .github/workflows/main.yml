@@ -1,0 +1,38 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    strategy:
+      matrix:
+        repos: [wps-office, activitywatch-bin, plasma5-wallpapers-dynamic, kwin-scripts-parachute, duf-git, alma, kwin-effects-sliding-notifications, plasma5-applets-virtual-desktop-bar-git, ttf-ms-fonts, gping]
+
+      fail-fast: false
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: DuckSoft/build-aur-action@master
+      with:
+        repo-name: ${{ matrix.repos }}
+
+    - uses: ncipollo/release-action@v1.7.3
+      with:
+        allowUpdates: true
+        tag: "packages"
+        artifacts: "./*/*.zst"
+        token: ${{ secrets.GITHUB_TOKEN }}
+
