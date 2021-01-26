@@ -16,7 +16,7 @@ jobs:
   build:
     strategy:
       matrix:
-        repos: [wps-office, plasma5-wallpapers-dynamic, kwin-scripts-parachute, alma, kwin-effects-sliding-notifications, plasma5-applets-virtual-desktop-bar-git, netease-musicbox ]
+        repos: [wps-office, plasma5-wallpapers-dynamic, kwin-scripts-parachute, alma, kwin-effects-sliding-notifications, plasma5-applets-virtual-desktop-bar-git ]
 
       fail-fast: false
 
