@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  AUR:
     strategy:
       matrix:
         repos: [wps-office, plasma5-wallpapers-dynamic, kwin-scripts-parachute, alma, plasma5-applets-virtual-desktop-bar-git ]
@@ -27,4 +27,30 @@ jobs:
         tag: "packages"
         artifacts: "./*/*.zst"
         token: ${{ secrets.GITHUB_TOKEN }}
+  
+  NonAUR:
+    strategy:
+      matrix:
+        PKGBUILDs: [ breeze10 ]
+
+      fail-fast: false
+        
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Makepkg and Check
+        id: makepkg
+        uses: edlanglois/pkgbuild-action@v1
+        with:
+          pkgdir: ${{ matrix.PKGBUILDs }}
+          aurDeps: true
+
+      - uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true
+          tag: "packages"
+          artifacts: ${{ steps.makepkg.outputs.pkgfile0 }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
