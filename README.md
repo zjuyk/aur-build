@@ -1,8 +1,6 @@
-# aur-build
-
 ## build aur and self-host packages
 
-For PKGBUILDs which have no dependencies in AUR:
+**For PKGBUILDs which have no dependencies in AUR:**
 
 Using `Ducksoft/build-aur-action`
 
@@ -11,7 +9,7 @@ Using `Ducksoft/build-aur-action`
 
 Finally, upload the *.zst to release via `ncipollo/release-action`
 
-For PKGBUILDs which have dependencies in AUR:
+**For PKGBUILDs which have dependencies in AUR:**
 
 Using `edlanglois/pkgbuild-action`
 
@@ -24,6 +22,7 @@ Hint: It will obtain packagelist via `makepkg --packagelist`, so you should make
 Finally, upload the *.zst to release via `ncipollo/release-action`
 
 ## Download releases via command line
+
 ```bash
 curl -s https://api.github.com/repos/zjuyk/aur-build/releases/latest | \
         rg browser_download_url | \
@@ -35,4 +34,5 @@ curl -s https://api.github.com/repos/zjuyk/aur-build/releases/latest | \
 ## Download releases via public repo
 
 You can vist my public repo on keybase: [here](https://zjuyk.keybase.pub)
+
 My GPG fingerprint: [B3A9 251F BEA2 1298 B80B  7F9E F84D 36A7 3BF3 9DC8](https://github.com/zjuyk.gpg)
