@@ -47,7 +47,7 @@ jobs:
           pkgdir: ${{ matrix.PKGBUILDs }}
           aurDeps: true
 
-      - uses: zjuyk/release-action@v1
+      - uses: zjuyk/release-action@master
         with:
           allowUpdates: true
           tag: "packages"
