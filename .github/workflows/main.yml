@@ -31,7 +31,7 @@ jobs:
   NonAUR:
     strategy:
       matrix:
-        PKGBUILDs: [ breeze10, deepin.com.dingtalk.com ]
+        PKGBUILDs: [ breeze10 ]
 
       fail-fast: false
         
