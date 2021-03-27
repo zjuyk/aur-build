@@ -31,7 +31,7 @@ jobs:
   NonAUR:
     strategy:
       matrix:
-        PKGBUILDs: [ breeze10, ros-noetic-controller-manager-msgs ]
+        PKGBUILDs: [ breeze10, ros-noetic-desktop-full ]
 
       fail-fast: false
         

@@ -1,27 +1,27 @@
 # Script generated with import_catkin_packages.py
 # For more information: https://github.com/bchretien/arch-ros-stacks
-pkgdesc="ROS - Messages and services for the controller manager."
-url='https://github.com/ros-controls/ros_control/wiki'
+pkgdesc="ROS - A metapackage to aggregate several packages."
+url='https://github.com/ros/metapackages'
 
-pkgname='ros-noetic-controller-manager-msgs'
-pkgver='0.19.1'
+pkgname='ros-noetic-desktop-full'
+pkgver='1.5.0'
 arch=('any')
 pkgrel=1
 license=('BSD')
 
-ros_makedepends=(ros-noetic-message-generation
-  ros-noetic-catkin
-  ros-noetic-std-msgs)
+ros_makedepends=(ros-noetic-catkin)
 makedepends=('cmake' 'ros-build-tools'
   ${ros_makedepends[@]})
 
-ros_depends=(ros-noetic-message-runtime
-  ros-noetic-std-msgs)
+ros_depends=(ros-noetic-desktop
+  ros-noetic-simulators
+  ros-noetic-perception
+  ros-noetic-urdf-sim-tutorial)
 depends=(${ros_depends[@]})
 
-_dir="ros_control-${pkgver}/controller_manager_msgs"
-source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-controls/ros_control/archive/${pkgver}.tar.gz")
-sha256sums=('9b39e47e78c43f36c378c0557a68b4ba35f1f723314cbd541a460e6a340bc4ae')
+_dir="metapackages-${pkgver}/desktop_full"
+source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros/metapackages/archive/${pkgver}.tar.gz")
+sha256sums=('5e055b7528d088cf62035d88c78cfd5aefcac2a96d0ce2ac62242f6d6f76d3b0')
 
 build() {
   # Use ROS environment variables
