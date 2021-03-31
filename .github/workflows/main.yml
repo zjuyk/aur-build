@@ -10,7 +10,7 @@ jobs:
   AUR:
     strategy:
       matrix:
-        repos: [wps-office, plasma5-wallpapers-dynamic, kwin-scripts-parachute, alma, plasma5-applets-virtual-desktop-bar-git ]
+        repos: [wps-office, plasma5-wallpapers-dynamic, kwin-scripts-parachute ]
 
       fail-fast: false
 
@@ -31,7 +31,7 @@ jobs:
   NonAUR:
     strategy:
       matrix:
-        PKGBUILDs: [ breeze10, electron-qq ]
+        PKGBUILDs: [ breeze10 ]
 
       fail-fast: false
         

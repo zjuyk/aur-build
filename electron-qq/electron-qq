@@ -1,2 +1,0 @@
-#!/usr/bin/bash
-electron /usr/lib/electron-qq.asar
