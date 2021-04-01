@@ -31,7 +31,7 @@ jobs:
   NonAUR:
     strategy:
       matrix:
-        PKGBUILDs: [ breeze10 ]
+        PKGBUILDs: [ breeze10, wine-for-wechat ]
 
       fail-fast: false
         
