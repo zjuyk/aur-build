@@ -31,7 +31,7 @@ jobs:
   NonAUR:
     strategy:
       matrix:
-        PKGBUILDs: [ breeze10 ]
+        PKGBUILDs: [ breeze10, code-transparent ]
 
       fail-fast: false
         
