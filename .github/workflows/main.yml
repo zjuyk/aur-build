@@ -10,7 +10,7 @@ jobs:
   AUR:
     strategy:
       matrix:
-        repos: [wps-office, plasma5-wallpapers-dynamic, kwin-scripts-parachute ]
+        repos: [wps-office, wps-office-mui-zh-cn, ttf-wps-fonts, plasma5-wallpapers-dynamic, kwin-scripts-parachute ]
 
       fail-fast: false
 
