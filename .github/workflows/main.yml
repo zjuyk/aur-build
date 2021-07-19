@@ -31,7 +31,7 @@ jobs:
   NonAUR:
     strategy:
       matrix:
-        PKGBUILDs: [ breeze10 ]
+        PKGBUILDs: [ everdo, nordic-theme-git ]
 
       fail-fast: false
         
