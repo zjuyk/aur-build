@@ -10,7 +10,7 @@ jobs:
   AUR:
     strategy:
       matrix:
-        repos: [wps-office, wps-office-mui-zh-cn, ttf-wps-fonts, plasma5-wallpapers-dynamic, kwin-scripts-parachute, nordic-kde-git ]
+        repos: [wps-office, ttf-wps-fonts, plasma5-wallpapers-dynamic, kwin-scripts-parachute, nordic-kde-git ]
 
       fail-fast: false
 
@@ -31,7 +31,7 @@ jobs:
   NonAUR:
     strategy:
       matrix:
-        PKGBUILDs: [ everdo, nordic-theme-git ]
+        PKGBUILDs: [ everdo, nordic-theme-git, wps-office-mui-zh-cn ]
 
       fail-fast: false
         
