@@ -31,7 +31,7 @@ jobs:
   NonAUR:
     strategy:
       matrix:
-        PKGBUILDs: [ nordic-theme-git, wps-office-mui-zh-cn ]
+        PKGBUILDs: [ nordic-theme-git ]
 
       fail-fast: false
         
